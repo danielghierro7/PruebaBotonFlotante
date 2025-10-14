@@ -5,6 +5,7 @@
       <set>
         <option value="$PROJECT_DIR$/node_modules/expo-modules-core/expo-module-gradle-plugin" />
         <option value="$PROJECT_DIR$/node_modules/expo-modules-autolinking/android/expo-gradle-plugin" />
+        <option value="$PROJECT_DIR$/node_modules/@react-native/gradle-plugin" />
       </set>
     </option>
   </component>
