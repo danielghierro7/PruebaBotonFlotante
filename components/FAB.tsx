@@ -5,19 +5,19 @@ interface Props {
  label: string;
  onPress: () => void;
  onLongPress: () => void;
-  position?: 'left' | 'right';
+  position?: 'izquierda' | 'derecha' | 'arriba'  | 'abajo' | 'centro';
 }
 
 
 
-export default function FAB({label,onPress,onLongPress,position="right"}:Props){
+export default function FAB({label,onPress,onLongPress,position="derecha"}:Props){
 
     const[count,setCount]=useState(0);
  return (
  
  
  <Pressable
- style={[styles.floatingButton ,styles.right]}
+ style={[styles.floatingButton ,position==="izquierda" ? styles.izquierda : position==="derecha" ? styles.derecha : position==="arriba" ? styles.]}
  onPress={onPress}
  onLongPress={onLongPress}
  >
@@ -39,11 +39,25 @@ export default function FAB({label,onPress,onLongPress,position="right"}:Props){
  shadowOpacity: 0.3,
  elevation: 3,
  shadowRadius: 4,
+  
  },
 
 
- right:{
+ derecha:{
     right:30,
     bottom:0,
- }
+    left:undefined,
+ },
+
+ izquierda:{
+    left:30,
+    right:undefined,
+    bottom:0,
+ },
+ arriba:{},
+abajo:{},
+  centro:{},
+
+
+
 });

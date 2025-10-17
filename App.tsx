@@ -23,7 +23,8 @@ export default function App() {
     <Text>+1</Text>
   </TouchableOpacity>
   */}
-  <FAB label= "Hola soy Dani Hierro" onPress={()=> setcount(count+1)} onLongPress={()=> setcount(0)} position='left' />
+  <FAB label= "Hola soy Dani Hierro" onPress={()=> setcount(count+1)} 
+  onLongPress={()=> setcount(0)} position='left' />
   <StatusBar style='auto' />
 </View>
   );
